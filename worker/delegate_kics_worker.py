@@ -25,6 +25,10 @@ BUNDLE_PATH = ROOT / "bundle-manifest.json"
 REPO_STATUS = "not_collected_bundle_overlayfs; complete source manifest verified"
 SCAN_FIELDS = ("status", "total", "severity", "query_ids")
 RECOVERY_FIELDS = ("status", "started", "completed", "incomplete")
+PILOT_RECOVERY_EXCEPTIONS = {"007191": {"baseline": 2, "enhanced": 4}}
+MISSING_RECOVERY_CONTROL = {
+    "status": "missing", "started": 0, "completed": 0, "incomplete": 0
+}
 
 
 def stamp():
@@ -114,10 +118,38 @@ def check_pilot(work, delegation):
     if (len(rows) != len(originals)
             or {r["case_id"] for r in rows} != set(originals)):
         raise ValueError("vSphere pilot case set differs")
+    exceptions = []
     for row in rows:
-        if compact(row) != originals[row["case_id"]]:
-            raise ValueError(f"vSphere pilot differs: {row['case_id']}")
-    print(f"vSphere pilot matches {len(rows)} frozen Windows cases", flush=True)
+        actual = compact(row)
+        control = originals[row["case_id"]]
+        if actual["input_sha256"] != control["input_sha256"]:
+            raise ValueError(f"vSphere pilot input differs: {row['case_id']}")
+        for mode in ("baseline", "enhanced"):
+            scan, expected_scan = actual["scans"][mode], control["scans"][mode]
+            if any(scan[field] != expected_scan[field] for field in SCAN_FIELDS):
+                raise ValueError(f"vSphere pilot findings differ: {row['case_id']} {mode}")
+            recovery, expected_recovery = scan["recovery"], expected_scan["recovery"]
+            allowed_count = PILOT_RECOVERY_EXCEPTIONS.get(row["case_id"], {}).get(mode)
+            if allowed_count is not None:
+                if (expected_recovery != MISSING_RECOVERY_CONTROL
+                        or recovery != {"status": "complete", "started": allowed_count,
+                                        "completed": allowed_count, "incomplete": 0}):
+                    raise ValueError(f"vSphere pilot recovery differs: {row['case_id']} {mode}")
+                exceptions.append({
+                    "case_id": row["case_id"], "mode": mode,
+                    "windows_recovery": expected_recovery,
+                    "linux_recovery": recovery,
+                    "reason": "Windows recovery trace was not collected; Linux trace is complete",
+                })
+            elif recovery != expected_recovery:
+                raise ValueError(f"vSphere pilot recovery differs: {row['case_id']} {mode}")
+    write(output / "pilot-control-comparison.json", {
+        "schema": 1, "status": "passed_with_documented_exceptions",
+        "windows_control_sha256": split.sha(EXPECTED_PATH),
+        "cases_compared": len(rows), "recovery_exceptions": exceptions,
+    })
+    print(f"vSphere pilot findings match {len(rows)} frozen Windows cases; "
+          f"{len(exceptions)} missing Windows recovery traces documented", flush=True)
 
 
 def run(args):
@@ -125,6 +157,9 @@ def run(args):
     if not (work / "stage-complete").is_file():
         raise ValueError("run bootstrap first")
     delegation, charts, repos, manifests, binary, build_info = load_inputs(work)
+    source_to_key = {repo["source_root"]: key for key, repo in repos.items()}
+    if len(source_to_key) != len(repos):
+        raise ValueError("duplicate repository source roots")
     if args.side == "assigned":
         if (delegation["status"] != "active" or not delegation["windows_cutover"]):
             raise ValueError("delegation is not active; Windows cutover is required")
@@ -153,7 +188,7 @@ def run(args):
             print("This vSphere side is already complete", flush=True)
             return
         for case_id in ids:
-            key = Path(charts[int(case_id)]["repo_root"]).name
+            key = source_to_key[charts[int(case_id)]["repo_root"]]
             partial = output / "repos" / key / "raw" / case_id
             if case_id not in recorded and partial.exists():
                 aborted = partial.parent.parent / "aborted"
@@ -187,7 +222,7 @@ def run(args):
     def task(case_id):
         index = int(case_id)
         original = charts[index]
-        key = Path(original["repo_root"]).name
+        key = source_to_key[original["repo_root"]]
         repo = repos[key]
         source = work / "corpus" / key
         mapped = dict(original, repo_root=str(source),
@@ -225,7 +260,7 @@ def run(args):
                         case_id = pending.pop(future)
                         row = future.result()
                         if row.get("input_sha256") != repos[
-                                Path(charts[int(case_id)]["repo_root"]).name]["input_sha256"]:
+                                source_to_key[charts[int(case_id)]["repo_root"]]]["input_sha256"]:
                             raise ValueError(f"case input hash differs: {case_id}")
                         rows.append(row)
                         stream.write(json.dumps(row, ensure_ascii=False) + "\n")
