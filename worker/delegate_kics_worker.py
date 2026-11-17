@@ -125,6 +125,7 @@ def run(args):
     if not (work / "stage-complete").is_file():
         raise ValueError("run bootstrap first")
     delegation, charts, repos, manifests, binary, build_info = load_inputs(work)
+    source_keys = {repo["source_root"]: key for key, repo in repos.items()}
     if args.side == "assigned":
         if (delegation["status"] != "active" or not delegation["windows_cutover"]):
             raise ValueError("delegation is not active; Windows cutover is required")
@@ -153,7 +154,7 @@ def run(args):
             print("This vSphere side is already complete", flush=True)
             return
         for case_id in ids:
-            key = Path(charts[int(case_id)]["repo_root"]).name
+            key = source_keys[charts[int(case_id)]["repo_root"]]
             partial = output / "repos" / key / "raw" / case_id
             if case_id not in recorded and partial.exists():
                 aborted = partial.parent.parent / "aborted"
@@ -187,7 +188,7 @@ def run(args):
     def task(case_id):
         index = int(case_id)
         original = charts[index]
-        key = Path(original["repo_root"]).name
+        key = source_keys[original["repo_root"]]
         repo = repos[key]
         source = work / "corpus" / key
         mapped = dict(original, repo_root=str(source),
@@ -224,8 +225,8 @@ def run(args):
                     for future in done:
                         case_id = pending.pop(future)
                         row = future.result()
-                        if row.get("input_sha256") != repos[
-                                Path(charts[int(case_id)]["repo_root"]).name]["input_sha256"]:
+                        key = source_keys[charts[int(case_id)]["repo_root"]]
+                        if row.get("input_sha256") != repos[key]["input_sha256"]:
                             raise ValueError(f"case input hash differs: {case_id}")
                         rows.append(row)
                         stream.write(json.dumps(row, ensure_ascii=False) + "\n")

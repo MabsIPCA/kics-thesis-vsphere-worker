@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-11-17T23:11:18.919553+00:00",
+  "created_at": "2026-11-17T23:13:24.506148+00:00",
   "purpose": "portable pinned KICS source and corpus handoff for active vSphere delegation",
   "kics_revision": "a8159859575b51567adbcb7124e0c5401144ec49",
   "kics_source_sha256": "27badd32914402889131dda211f6e452b3e2825f515c41287a09805f80b00818",
@@ -27,7 +27,7 @@
     "scripts/verify_handoff.py": "f3dc51c6926e6da7e5e9f98ee2738acb4708f508fc92967dfbb3e34e99f182e0",
     "worker/build.json": "bf861b5747e05348e4230c3671fef0f886ac7d3ed4698cbb97499014be718ca4",
     "worker/corpus_selection.py": "1099c225bbf613ca1025098c635a844c600591cca81920533042a60148d088db",
-    "worker/delegate_kics_worker.py": "5f0fbddd951e75c7d188e3b4a7fdb53d884f8a0043f34a5bb2924498c5a53037",
+    "worker/delegate_kics_worker.py": "c42f5965de5a58316873c9552634bfb4fc74a7868dd22f6c99c019e0a23df2f3",
     "worker/kics_build.py": "296194efa2e9bdecf17bf8fe1e6ec485cfe842bd209d61c24ce3fb1e9663400b",
     "worker/kics_corpus_replay.py": "eef962550587177354ee1b9aa6be98ca4560225c05823b315e3df667d961991d",
     "worker/pilot_expectations.py": "e581681325717969f5539f24ea1d29645f3529b5ba35ce7076ffc6beec045e8b",
