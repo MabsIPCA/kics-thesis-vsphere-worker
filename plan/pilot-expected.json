@@ -1,0 +1,94 @@
+{
+  "plan_sha256": "8d9197f054bdf0d83ac9b5ab7fd81f29e2e8a000f31205985d308d70da0547be",
+  "kics_source_sha256": "27badd32914402889131dda211f6e452b3e2825f515c41287a09805f80b00818",
+  "records": [
+    {
+      "case_id": "004340",
+      "input_sha256": "688675d18bc883474241849404d2e4aa763d03fa9c9e726a90df947e230934ae",
+      "scans": {
+        "baseline": {
+          "status": "ok",
+          "total": 0,
+          "severity": {
+            "CRITICAL": 0,
+            "HIGH": 0,
+            "INFO": 0,
+            "LOW": 0,
+            "MEDIUM": 0,
+            "TRACE": 0
+          },
+          "query_ids": [],
+          "recovery": {
+            "status": "complete",
+            "started": 2,
+            "completed": 2,
+            "incomplete": 0
+          }
+        },
+        "enhanced": {
+          "status": "ok",
+          "total": 0,
+          "severity": {
+            "CRITICAL": 0,
+            "HIGH": 0,
+            "INFO": 0,
+            "LOW": 0,
+            "MEDIUM": 0,
+            "TRACE": 0
+          },
+          "query_ids": [],
+          "recovery": {
+            "status": "complete",
+            "started": 2,
+            "completed": 2,
+            "incomplete": 0
+          }
+        }
+      }
+    },
+    {
+      "case_id": "004341",
+      "input_sha256": "688675d18bc883474241849404d2e4aa763d03fa9c9e726a90df947e230934ae",
+      "scans": {
+        "baseline": {
+          "status": "ok",
+          "total": 0,
+          "severity": {
+            "CRITICAL": 0,
+            "HIGH": 0,
+            "INFO": 0,
+            "LOW": 0,
+            "MEDIUM": 0,
+            "TRACE": 0
+          },
+          "query_ids": [],
+          "recovery": {
+            "status": "complete",
+            "started": 2,
+            "completed": 2,
+            "incomplete": 0
+          }
+        },
+        "enhanced": {
+          "status": "ok",
+          "total": 0,
+          "severity": {
+            "CRITICAL": 0,
+            "HIGH": 0,
+            "INFO": 0,
+            "LOW": 0,
+            "MEDIUM": 0,
+            "TRACE": 0
+          },
+          "query_ids": [],
+          "recovery": {
+            "status": "complete",
+            "started": 2,
+            "completed": 2,
+            "incomplete": 0
+          }
+        }
+      }
+    }
+  ]
+}

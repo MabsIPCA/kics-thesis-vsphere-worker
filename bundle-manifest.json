@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "created_at": "2026-11-17T01:09:44.891281+00:00",
+  "release_tag": "corpus-20261117",
+  "github_repo": "MabsIPCA/kics-thesis-vsphere-worker",
+  "delegation_sha256": "8deab99e9cc62f3e738a227735826695bf07a2c6ecb629f2d0a3c5105f487233",
+  "kics_source_sha256": "27badd32914402889131dda211f6e452b3e2825f515c41287a09805f80b00818",
+  "linux_binary_sha256": "7c49b1e07945f03b01c37855aa7462ae70d2272dfc7500d9e2f579ab1319d52a",
+  "assets": [
+    {
+      "name": "kics-source.tar.gz",
+      "bytes": 98697814,
+      "sha256": "0f9d64f57bcd1d462696718b779be56082d85dd23e209b0fb851648399662279"
+    },
+    {
+      "name": "kics-linux-binary.tar.gz",
+      "bytes": 70387629,
+      "sha256": "035843ea47963f005e294262a9d1bbb5bf384ee095339b8204397a5ceb86bbac"
+    },
+    {
+      "name": "go-toolchain.tar.gz",
+      "bytes": 91790799,
+      "sha256": "db10ac54d6908e5043448e5eee6bbe0c1905f6acfe7a9f34a5376e58d44f0406"
+    },
+    {
+      "name": "corpus-beclab__apps.tar.gz",
+      "bytes": 3440926,
+      "sha256": "fb823cdac47ca290ec994d0fd4e1c40d155af97d02ca08e6d066c412e7aadc0c"
+    },
+    {
+      "name": "corpus-kubernetes__charts.tar.gz",
+      "bytes": 6269713,
+      "sha256": "1140514b4c4d5dc67b2b2b49357b675b0c80bd6c249766d1f77b6fc031068a19"
+    },
+    {
+      "name": "corpus-k8s-home-lab__helm-charts.tar.gz",
+      "bytes": 4790413,
+      "sha256": "b28288d477e45da3610defb0f9466a5a46f6fa4b3484053950ed548965570168"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+# Large verified inputs are staged onto the VM OS disk, outside this repository.
+data/
+work/
+results/
+*.log
+*.pid
+__pycache__/
+*.pyc
+.env*
+credentials*
