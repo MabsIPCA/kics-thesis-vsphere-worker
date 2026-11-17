@@ -26,9 +26,9 @@ to start.
 - Ubuntu x86-64, Python 3.10+, Git, CA certificates, and `util-linux` with
   `unshare` and `setsid`. Unprivileged user namespaces and overlayfs must work.
 - Outbound HTTPS access to GitHub, including release asset downloads.
-- At least **12 GiB free** on the OS disk before starting. The worker checks
-  space every 30 seconds and stops scans if free space falls below **4 GiB**.
-  The exact requirement depends on report sizes; watch the VM's disk.
+- More than **4 GiB free** on the OS disk. This is the hard stop threshold:
+  bootstrap checks after each asset, and the worker checks every 30 seconds.
+  **12 GiB free is recommended** for the full run because report sizes vary.
 - A user account that can write to its home directory. A GitHub login is only
   needed later if you choose to upload the result archive to GitHub.
 

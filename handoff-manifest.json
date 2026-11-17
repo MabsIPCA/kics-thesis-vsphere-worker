@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-11-17T23:20:04.709689+00:00",
+  "created_at": "2026-11-17T23:37:36.319075+00:00",
   "purpose": "portable pinned KICS source and corpus handoff for active vSphere delegation",
   "kics_revision": "a8159859575b51567adbcb7124e0c5401144ec49",
   "kics_source_sha256": "27badd32914402889131dda211f6e452b3e2825f515c41287a09805f80b00818",
@@ -11,7 +11,7 @@
     ".gitattributes": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d",
     ".gitignore": "6d27cbb13d8a29b81ef118805515af80f754636251747351b4a90db3a9b96420",
     "bundle-manifest.json": "a9de46b07dde6b4d4f1f34c1b2f8fee430508525aa8d725231632cf655aaf0f0",
-    "README.md": "27f20d1dbcae52ad6c62ad935e8acac297e1421ccb545746bc2c33762654852e",
+    "README.md": "fd5148ca4e5c435853c6c951c5ba2fae457f7b72e5be7c2e633fd073fda15d1f",
     "plan/pilot-expected.json": "1909637ac8ba19e79f4ab038faf8445480bec29ffb44ca9cb289d861ca121d05",
     "plan/pilot-platform-observation-7191.json": "1e34901357fb9b1ae588e47fc6d57b0c617d4da6d6b8e7e207862e7960be99ea",
     "plan/plan.json": "8d9197f054bdf0d83ac9b5ab7fd81f29e2e8a000f31205985d308d70da0547be",
