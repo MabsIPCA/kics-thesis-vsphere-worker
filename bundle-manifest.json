@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "created_at": "2026-11-17T01:09:44.891281+00:00",
-  "release_tag": "corpus-20261117",
+  "created_at": "2026-11-17T23:04:33.636246+00:00",
+  "release_tag": "corpus-20261117-25pct",
   "github_repo": "MabsIPCA/kics-thesis-vsphere-worker",
-  "delegation_sha256": "8deab99e9cc62f3e738a227735826695bf07a2c6ecb629f2d0a3c5105f487233",
+  "delegation_sha256": "aa170b19e2ad05c80759182698c39576e479b48437a28cffc0d25cd8170fec10",
   "kics_source_sha256": "27badd32914402889131dda211f6e452b3e2825f515c41287a09805f80b00818",
   "linux_binary_sha256": "7c49b1e07945f03b01c37855aa7462ae70d2272dfc7500d9e2f579ab1319d52a",
   "assets": [
@@ -33,9 +33,14 @@
       "sha256": "1140514b4c4d5dc67b2b2b49357b675b0c80bd6c249766d1f77b6fc031068a19"
     },
     {
-      "name": "corpus-k8s-home-lab__helm-charts.tar.gz",
-      "bytes": 4790413,
-      "sha256": "b28288d477e45da3610defb0f9466a5a46f6fa4b3484053950ed548965570168"
+      "name": "corpus-redhat-community-ai-tools__UnifAI.tar.gz",
+      "bytes": 41222861,
+      "sha256": "381e17856299abd803f9bb263e783b86a3fe3a51b6f30e0dc42c98504aa137d1"
+    },
+    {
+      "name": "corpus-EugenMayer__helm-charts.tar.gz",
+      "bytes": 1482559,
+      "sha256": "a9ea5e1335e5d8bbe3588ff46496e4ed2d1102b41a0d437b167e22be8f99f802"
     }
   ]
 }

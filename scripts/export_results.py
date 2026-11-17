@@ -27,8 +27,8 @@ def main():
     if not assigned.is_dir() or not pilot.is_dir():
         raise SystemExit("both pilot and assigned results are required")
     manifest = json.loads((assigned / "manifest.json").read_text(encoding="utf-8"))
-    if manifest["status"] != "completed" or manifest["terminal_records"] != 959:
-        raise SystemExit("vSphere assignment has not completed all 959 cases")
+    if manifest["status"] != "completed" or manifest["terminal_records"] != 810:
+        raise SystemExit("vSphere assignment has not completed all 810 cases")
     export = WORK / "exports"
     export.mkdir(exist_ok=True)
     archive_path = export / "vsphere-results-20261117.tar.gz"

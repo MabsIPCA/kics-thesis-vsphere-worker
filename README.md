@@ -1,18 +1,19 @@
 # vSphere KICS thesis worker
 
-This public repository runs **959 of the 3,241 cases originally assigned to
-Windows (29.6%)**. The three complete saved chart repositories are
-`beclab__apps` (412 cases), `kubernetes__charts` (356), and
-`k8s-home-lab__helm-charts` (191). Their exact content hashes, source Git
+This public repository runs **810 of the 3,241 cases originally assigned to
+Windows (25.0%)**. The four complete saved chart repositories are
+`beclab__apps` (412 cases), `kubernetes__charts` (356),
+`redhat-community-ai-tools__UnifAI` (21), and `EugenMayer__helm-charts` (21).
+Their exact content hashes, source Git
 revisions, assigned case IDs, and the Windows cutover journal hash are in
 [`plan/vsphere-delegation.json`](plan/vsphere-delegation.json). Windows skips
 these IDs. The existing Linux host's 621 cases remain a separate assignment.
 
 The repository is the VM's only starting point. Its pinned KICS source, Linux
-binary, Go 1.26.3 toolchain, and exact chart corpus are six checksum-pinned
-assets on the public `corpus-20261117` GitHub release. The bootstrap downloads
+binary, Go 1.26.3 toolchain, and exact chart corpus are seven checksum-pinned
+assets on the public `corpus-20261117-25pct` GitHub release. The bootstrap downloads
 them over HTTPS to the VM **OS disk**, verifies the source and every corpus
-file, then starts a three-case cross-platform pilot. Production starts only if
+file, then starts a four-case cross-platform pilot. Production starts only if
 the pilot's findings and render-recovery counts match the Windows controls.
 No NAS mount, SSH access to the VM, GitHub token, Docker, or Helm CLI is needed
 to start.
@@ -36,10 +37,10 @@ cd kics-thesis-vsphere-worker
 bash scripts/start.sh
 ```
 
-The command verifies the repository files, downloads and checks six release
-assets, extracts them under `~/kics-vsphere-work`, verifies KICS and the three
+The command verifies the repository files, downloads and checks seven release
+assets, extracts them under `~/kics-vsphere-work`, verifies KICS and the four
 saved corpus trees, checks unprivileged overlayfs, runs the pilot, compares it
-with three frozen Windows controls, then runs the 959 assigned cases with
+with four frozen Windows controls, then runs the 810 assigned cases with
 three chart workers. It journals each completed case and resumes safely if
 you rerun the same command after an interruption. Set `KICS_VM_WORK_ROOT` to
 another **local OS disk** path before starting if needed.

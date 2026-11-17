@@ -442,7 +442,14 @@ def run_worker(args):
         if args.side == "windows" and args.delegate_plan:
             previous = manifest.get("delegate_plan_sha256")
             if previous and previous != delegate_sha:
-                raise ValueError("Windows delegation changed after resuming")
+                if delegation.get("supersedes_delegation_sha256") != previous:
+                    raise ValueError("Windows delegation changed without a recorded predecessor")
+                manifest.setdefault("delegation_history", []).append({
+                    "plan_sha256": previous,
+                    "delegated_case_ids": manifest.get("delegated_case_ids", []),
+                    "superseded_at": stamp(),
+                    "superseded_by": delegate_sha,
+                })
             manifest["assigned_case_ids"] = ids
             manifest["delegated_case_ids"] = sorted(delegated_ids)
             manifest["delegate_plan_sha256"] = delegate_sha
