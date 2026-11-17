@@ -44,6 +44,17 @@ three chart workers. It journals each completed case and resumes safely if
 you rerun the same command after an interruption. Set `KICS_VM_WORK_ROOT` to
 another **local OS disk** path before starting if needed.
 
+### Pilot recovery control exception
+
+The frozen Windows control for case `007191` has no collected recovery trace in
+either scan mode. Its findings match the Linux pilot. The Linux pilot recorded
+complete recovery traces with 2 baseline and 4 enhanced events, with no
+incomplete events. The pilot gate accepts those exact Linux counts for this
+case only. It still requires exact findings for all three cases and exact
+recovery records wherever the Windows control has a trace. The comparison and
+the unavailable Windows control are recorded in
+`~/kics-vsphere-work/results/vsphere-pilot/pilot-control-comparison.json`.
+
 The current source plan covers 9,861 chart directories. The split preserves
 their original global case IDs so results can be checked against the frozen
 Windows and Linux runs. The VM scans baseline and enhanced modes with the

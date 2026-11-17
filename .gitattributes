@@ -1,0 +1,12 @@
+* text=auto eol=lf
+bundle-manifest.json text eol=crlf
+plan/pilot-expected.json text eol=crlf
+plan/plan.json text eol=crlf
+plan/selected-charts.json text eol=crlf
+plan/vsphere-delegation.json text eol=crlf
+plan/vsphere-pilot-expected.json text eol=crlf
+worker/build.json text eol=crlf
+worker/corpus_selection.py text eol=crlf
+worker/kics_build.py text eol=crlf
+worker/kics_corpus_replay.py text eol=crlf
+worker/recovery_results.py text eol=crlf

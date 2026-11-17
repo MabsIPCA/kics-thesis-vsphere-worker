@@ -28,6 +28,7 @@ def main():
         for path in ROOT.rglob("*")
         if path.is_file() and ".git" not in path.relative_to(ROOT).parts
         and "__pycache__" not in path.relative_to(ROOT).parts
+        and not path.name.startswith(".env")
         and path.suffix != ".pyc" and path.name != "handoff-manifest.json"
     }
     if actual != set(manifest["files"]):
