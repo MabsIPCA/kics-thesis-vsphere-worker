@@ -34,6 +34,7 @@ def main():
         raise SystemExit("handoff file set differs from manifest")
     plan = json.loads((ROOT / "plan/plan.json").read_text(encoding="utf-8"))
     delegation = json.loads((ROOT / "plan/vsphere-delegation.json").read_text(encoding="utf-8"))
+    pilot = json.loads((ROOT / "plan/vsphere-pilot-expected.json").read_text(encoding="utf-8"))
     bundle = json.loads((ROOT / "bundle-manifest.json").read_text(encoding="utf-8"))
     if (plan["vm_repo_input_sha256"] != manifest["corpus_sha256"]
             or plan["kics_revision"] != manifest["kics_revision"]
@@ -41,10 +42,13 @@ def main():
             or sha(ROOT / "worker/build.json") != plan["kics_build_evidence_sha256"]
             or delegation["status"] != "active"
             or delegation["parent_plan_sha256"] != sha(ROOT / "plan/plan.json")
-            or bundle["delegation_sha256"] != sha(ROOT / "plan/vsphere-delegation.json")):
+            or bundle["delegation_sha256"] != sha(ROOT / "plan/vsphere-delegation.json")
+            or len(pilot["pilot_case_ids"]) != len(delegation["repos"])
+            or {record["case_id"] for record in pilot["records"]}
+            != set(pilot["pilot_case_ids"])):
         raise SystemExit("pinned plan inputs differ")
     print(f"Verified {len(actual)} handoff files; "
-          f"{len(delegation['pilot_case_ids'])} vSphere pilot cases")
+          f"{len(pilot['pilot_case_ids'])} vSphere pilot cases")
 
 
 if __name__ == "__main__":

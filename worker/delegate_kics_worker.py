@@ -132,7 +132,13 @@ def run(args):
         check_pilot(work, delegation)
         ids = delegation["assigned_case_ids"]
     else:
-        ids = delegation["pilot_case_ids"]
+        pilot = read(EXPECTED_PATH)
+        ids = pilot["pilot_case_ids"]
+        if ({record["case_id"] for record in pilot["records"]} != set(ids)
+                or len(ids) != len(repos)
+                or {source_keys[charts[int(case_id)]["repo_root"]] for case_id in ids}
+                != set(repos)):
+            raise ValueError("pilot controls must cover each delegated repository once")
     if not ids or not set(ids) <= set(delegation["assigned_case_ids"]):
         raise ValueError("pilot or assigned IDs are invalid")
     output = work / "results" / ("vsphere-pilot" if args.side == "pilot" else "vsphere-run")

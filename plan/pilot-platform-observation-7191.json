@@ -1,0 +1,92 @@
+{
+  "case_id": "007191",
+  "reason": "Empty-render parent chart: Windows recorded no Helm recovery trace; Linux recorded render events and two enhanced failures despite zero scanned files and zero findings. Replaced with nested chart 007192 for the cross-platform pilot; the discrepancy remains evidence for final analysis.",
+  "windows": {
+    "case_id": "007191",
+    "input_sha256": "44d6123a5d3f9be143e36d229baaf527a055f2c3ed60388de97e316f4ed0c7be",
+    "scans": {
+      "baseline": {
+        "status": "ok",
+        "total": 0,
+        "severity": {
+          "CRITICAL": 0,
+          "HIGH": 0,
+          "INFO": 0,
+          "LOW": 0,
+          "MEDIUM": 0,
+          "TRACE": 0
+        },
+        "query_ids": [],
+        "recovery": {
+          "status": "missing",
+          "started": 0,
+          "completed": 0,
+          "incomplete": 0
+        }
+      },
+      "enhanced": {
+        "status": "ok",
+        "total": 0,
+        "severity": {
+          "CRITICAL": 0,
+          "HIGH": 0,
+          "INFO": 0,
+          "LOW": 0,
+          "MEDIUM": 0,
+          "TRACE": 0
+        },
+        "query_ids": [],
+        "recovery": {
+          "status": "missing",
+          "started": 0,
+          "completed": 0,
+          "incomplete": 0
+        }
+      }
+    }
+  },
+  "linux": {
+    "case_id": "007191",
+    "input_sha256": "44d6123a5d3f9be143e36d229baaf527a055f2c3ed60388de97e316f4ed0c7be",
+    "scans": {
+      "baseline": {
+        "status": "ok",
+        "total": 0,
+        "severity": {
+          "CRITICAL": 0,
+          "HIGH": 0,
+          "INFO": 0,
+          "LOW": 0,
+          "MEDIUM": 0,
+          "TRACE": 0
+        },
+        "query_ids": [],
+        "recovery": {
+          "status": "complete",
+          "started": 2,
+          "completed": 2,
+          "incomplete": 0
+        }
+      },
+      "enhanced": {
+        "status": "ok",
+        "total": 0,
+        "severity": {
+          "CRITICAL": 0,
+          "HIGH": 0,
+          "INFO": 0,
+          "LOW": 0,
+          "MEDIUM": 0,
+          "TRACE": 0
+        },
+        "query_ids": [],
+        "recovery": {
+          "status": "complete",
+          "started": 4,
+          "completed": 4,
+          "incomplete": 0
+        }
+      }
+    }
+  }
+}

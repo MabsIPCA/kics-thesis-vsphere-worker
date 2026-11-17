@@ -15,6 +15,9 @@ assets on the public `corpus-20261117-25pct` GitHub release. The bootstrap downl
 them over HTTPS to the VM **OS disk**, verifies the source and every corpus
 file, then starts a four-case cross-platform pilot. Production starts only if
 the pilot's findings and render-recovery counts match the Windows controls.
+The beclab pilot uses nested chart `007192`; an earlier empty-render parent
+chart showed a Windows/Linux recovery-trace difference, preserved in
+[`plan/pilot-platform-observation-7191.json`](plan/pilot-platform-observation-7191.json).
 No NAS mount, SSH access to the VM, GitHub token, Docker, or Helm CLI is needed
 to start.
 
