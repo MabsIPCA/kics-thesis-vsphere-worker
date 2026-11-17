@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-11-17T23:07:33.669907+00:00",
+  "created_at": "2026-11-17T23:11:18.919553+00:00",
   "purpose": "portable pinned KICS source and corpus handoff for active vSphere delegation",
   "kics_revision": "a8159859575b51567adbcb7124e0c5401144ec49",
   "kics_source_sha256": "27badd32914402889131dda211f6e452b3e2825f515c41287a09805f80b00818",
@@ -8,6 +8,7 @@
   "current_linux_case_count": 621,
   "current_windows_case_count": 3241,
   "files": {
+    ".gitattributes": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d",
     ".gitignore": "6d27cbb13d8a29b81ef118805515af80f754636251747351b4a90db3a9b96420",
     "bundle-manifest.json": "a9de46b07dde6b4d4f1f34c1b2f8fee430508525aa8d725231632cf655aaf0f0",
     "README.md": "473a77d795dd73e2df1dfcb2545fafa232301954956b572b91b8c06ea7c80bc3",
