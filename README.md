@@ -1,70 +1,51 @@
-# vSphere KICS thesis worker
+# vSphere KICS thesis worker: second batch
 
-This public repository runs **810 of the 3,241 cases originally assigned to
-Windows (25.0%)**. The four complete saved chart repositories are
-`beclab__apps` (412 cases), `kubernetes__charts` (356),
-`redhat-community-ai-tools__UnifAI` (21), and `EugenMayer__helm-charts` (21).
-Their exact content hashes, source Git
-revisions, assigned case IDs, and the Windows cutover journal hash are in
-[`plan/vsphere-delegation.json`](plan/vsphere-delegation.json). Windows skips
-these IDs. The existing Linux host's 621 cases remain a separate assignment.
+This `batch-1000` branch runs **1,000 new chart cases** on the vSphere VM.
+The previous VM [result release](https://github.com/cx-miguel-dasilva/kics-thesis-vsphere-worker/releases/tag/vsphere-results-20261117)
+contains 959 completed cases and is preserved separately. The new batch
+includes 42 cases missing from the earlier active 810-case plan and 958 more
+unrun Windows cases. Its eight complete saved repositories, input hashes,
+source revisions, and exact case IDs are in
+[`plan/vsphere-delegation.json`](plan/vsphere-delegation.json).
 
-The repository is the VM's only starting point. Its pinned KICS source, Linux
-binary, Go 1.26.3 toolchain, and exact chart corpus are seven checksum-pinned
-assets on the public `corpus-20261117-25pct` GitHub release. The bootstrap downloads
-them over HTTPS to the VM **OS disk**, verifies the source and every corpus
-file, then starts a four-case cross-platform pilot. Production starts only if
-the pilot's findings and render-recovery counts match the Windows controls.
-The beclab pilot uses nested chart `007192`; an earlier empty-render parent
-chart showed a Windows/Linux recovery-trace difference, preserved in
-[`plan/pilot-platform-observation-7191.json`](plan/pilot-platform-observation-7191.json).
-No NAS mount, SSH access to the VM, GitHub token, Docker, or Helm CLI is needed
-to start.
+The VM needs only this GitHub branch. Its pinned KICS source, Linux binary,
+Go 1.26.3 toolchain, and eight corpus trees are checksum-pinned release assets.
+The bootstrap downloads them to the VM **OS disk**, verifies every input,
+then runs one Windows-controlled pilot case per repository. The 1,000-case
+production run starts only after the pilot passes. Windows excludes these
+cases and the previous 959 VM cases at the recorded cutover. The separate
+Linux PC completed 621 cases; its host provenance is recorded outside this
+repository with the previous VM result archive.
 
-## VM prerequisites
+## Prerequisites
 
 - Ubuntu x86-64, Python 3.10+, Git, CA certificates, and `util-linux` with
   `unshare` and `setsid`. Unprivileged user namespaces and overlayfs must work.
-- Outbound HTTPS access to GitHub, including release asset downloads.
-- More than **4 GiB free** on the OS disk. This is the hard stop threshold:
-  bootstrap checks after each asset, and the worker checks every 30 seconds.
-  **12 GiB free is recommended** for the full run because report sizes vary.
-- A user account that can write to its home directory. A GitHub login is only
-  needed later if you choose to upload the result archive to GitHub.
+- Outbound HTTPS to GitHub, including release asset downloads.
+- More than **4 GiB free** on the local OS disk. Bootstrap checks after each
+  asset, and the scan checks every 30 seconds. **12 GiB is recommended** for
+  an uninterrupted full run.
+- A writable home directory. No NAS mount, SSH access to the VM, GitHub token,
+  Docker, or Helm CLI is needed to start.
 
-## One-command start
+## Start or resume
 
 ```bash
-git clone https://github.com/MabsIPCA/kics-thesis-vsphere-worker.git
-cd kics-thesis-vsphere-worker
+git clone --branch batch-1000 https://github.com/MabsIPCA/kics-thesis-vsphere-worker.git kics-thesis-vsphere-batch1000
+cd kics-thesis-vsphere-batch1000
 bash scripts/start.sh
 ```
 
-The command verifies the repository files, downloads and checks seven release
-assets, extracts them under `~/kics-vsphere-work`, verifies KICS and the four
-saved corpus trees, checks unprivileged overlayfs, runs the pilot, compares it
-with four frozen Windows controls, then runs the 810 assigned cases with
-three chart workers. It journals each completed case and resumes safely if
-you rerun the same command after an interruption. Set `KICS_VM_WORK_ROOT` to
-another **local OS disk** path before starting if needed.
+The work root defaults to `~/kics-vsphere-work-batch2`, separate from the
+earlier VM run. Rerunning the same command resumes journaled cases. Set
+`KICS_VM_WORK_ROOT` to another **local OS disk** path if needed.
 
-The current source plan covers 9,861 chart directories. The split preserves
-their original global case IDs so results can be checked against the frozen
-Windows and Linux runs. The VM scans baseline and enhanced modes with the
-same pinned KICS source; Linux binary SHA-256 differs from the Windows binary
-because it targets Linux. This is recorded in the manifests.
+## Return the results
 
-## Results
-
-The full local results are in `~/kics-vsphere-work/results/vsphere-run`.
-The startup script also creates a compressed archive and SHA-256 manifest in
-`~/kics-vsphere-work/exports`. Return both files through your preferred
-vSphere file transfer. If you authenticate `gh` in the VM, you can upload
-those two files to a GitHub release instead. The archive includes the full
-pilot, per-case raw reports, recovery traces, journal, and summary. Keep its
-manifest alongside it when transferring so the thesis merge can verify it.
-
-All input files in this repository and its release are public chart/KICS
-source data. Credentials and local Windows paths are not required on the VM;
-the Windows paths in the plan are retained only as provenance for the original
-saved repositories.
+The script writes both
+`~/kics-vsphere-work-batch2/exports/vsphere-results-batch1000-20261118.tar.gz`
+and the matching `.json` checksum manifest. Keep the pair together when
+transferring or uploading them. The archive contains the pilot, every raw
+baseline and enhanced report, render traces, execution journal, and summary.
+The thesis merge will verify this batch alongside the previous 959 VM cases,
+the Linux PC's 621 cases, Windows, and the frozen source run.

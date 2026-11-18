@@ -9,7 +9,7 @@ if [[ "${KICS_VM_RUN_NS:-}" != yes ]]; then
 fi
 
 repo="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-work="${KICS_VM_WORK_ROOT:-$HOME/kics-vsphere-work}"
+work="${KICS_VM_WORK_ROOT:-$HOME/kics-vsphere-work-batch2}"
 test -f "$work/stage-complete"
 export PATH="$work/toolchain/go/bin:$PATH"
 export TMPDIR="$work/tmp"

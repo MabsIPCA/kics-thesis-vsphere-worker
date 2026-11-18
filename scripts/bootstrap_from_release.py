@@ -14,7 +14,7 @@ from urllib.request import Request, urlopen
 
 
 ROOT = Path(__file__).resolve().parents[1]
-WORK = Path(os.environ.get("KICS_VM_WORK_ROOT", Path.home() / "kics-vsphere-work")).resolve()
+WORK = Path(os.environ.get("KICS_VM_WORK_ROOT", Path.home() / "kics-vsphere-work-batch2")).resolve()
 MIN_FREE = 4 * 1024**3
 
 

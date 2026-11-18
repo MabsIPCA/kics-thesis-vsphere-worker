@@ -2,175 +2,17 @@
   "parent_plan_sha256": "8d9197f054bdf0d83ac9b5ab7fd81f29e2e8a000f31205985d308d70da0547be",
   "kics_source_sha256": "27badd32914402889131dda211f6e452b3e2825f515c41287a09805f80b00818",
   "windows_binary_sha256": "51a2d979512ebb57a7b820da2efa080c72ef1a565ef57a8a292a8f3e3750dde5",
+  "pilot_case_ids": [
+    "008351",
+    "008578",
+    "008829",
+    "007794",
+    "008627",
+    "008802",
+    "007644",
+    "009831"
+  ],
   "records": [
-    {
-      "case_id": "007192",
-      "input_sha256": "44d6123a5d3f9be143e36d229baaf527a055f2c3ed60388de97e316f4ed0c7be",
-      "scans": {
-        "baseline": {
-          "status": "ok",
-          "total": 16,
-          "severity": {
-            "CRITICAL": 0,
-            "HIGH": 1,
-            "INFO": 2,
-            "LOW": 8,
-            "MEDIUM": 5,
-            "TRACE": 0
-          },
-          "query_ids": [
-            "02323c00-cdc3-4fdc-a310-4f2b3e7a1660",
-            "268ca686-7fb7-4ae9-b129-955a2a89064e",
-            "48471392-d4d0-47c0-b135-cdec95eb3eef",
-            "48a5beba-e4c0-4584-a2aa-e6894e4cf424",
-            "4a20ebac-1060-4c81-95d1-1f7f620e983b",
-            "5572cc5e-1e4c-4113-92a6-7a8a3bd25e6d",
-            "7c81d34c-8e5a-402b-9798-9f442630e678",
-            "8b36775e-183d-4d46-b0f7-96a6f34a723f",
-            "a97a340a-0063-418e-b3a1-3028941d0995",
-            "a9c2f49d-0671-4fc9-9ece-f4e261e128d0",
-            "ade74944-a674-4e00-859e-c6eab5bde441",
-            "caa3479d-885d-4882-9aac-95e5e78ef5c2",
-            "cf34805e-3872-4c08-bf92-6ff7bb0cfadb",
-            "dbbc6705-d541-43b0-b166-dd4be8208b54",
-            "e84eaf4d-2f45-47b2-abe8-e581b06deb66",
-            "f377b83e-bd07-4f48-a591-60c82b14a78b"
-          ],
-          "recovery": {
-            "status": "complete",
-            "started": 2,
-            "completed": 2,
-            "incomplete": 0
-          }
-        },
-        "enhanced": {
-          "status": "ok",
-          "total": 16,
-          "severity": {
-            "CRITICAL": 0,
-            "HIGH": 1,
-            "INFO": 2,
-            "LOW": 8,
-            "MEDIUM": 5,
-            "TRACE": 0
-          },
-          "query_ids": [
-            "02323c00-cdc3-4fdc-a310-4f2b3e7a1660",
-            "268ca686-7fb7-4ae9-b129-955a2a89064e",
-            "48471392-d4d0-47c0-b135-cdec95eb3eef",
-            "48a5beba-e4c0-4584-a2aa-e6894e4cf424",
-            "4a20ebac-1060-4c81-95d1-1f7f620e983b",
-            "5572cc5e-1e4c-4113-92a6-7a8a3bd25e6d",
-            "7c81d34c-8e5a-402b-9798-9f442630e678",
-            "8b36775e-183d-4d46-b0f7-96a6f34a723f",
-            "a97a340a-0063-418e-b3a1-3028941d0995",
-            "a9c2f49d-0671-4fc9-9ece-f4e261e128d0",
-            "ade74944-a674-4e00-859e-c6eab5bde441",
-            "caa3479d-885d-4882-9aac-95e5e78ef5c2",
-            "cf34805e-3872-4c08-bf92-6ff7bb0cfadb",
-            "dbbc6705-d541-43b0-b166-dd4be8208b54",
-            "e84eaf4d-2f45-47b2-abe8-e581b06deb66",
-            "f377b83e-bd07-4f48-a591-60c82b14a78b"
-          ],
-          "recovery": {
-            "status": "complete",
-            "started": 2,
-            "completed": 2,
-            "incomplete": 0
-          }
-        }
-      }
-    },
-    {
-      "case_id": "009464",
-      "input_sha256": "c292d43a74797cd2d43f2e4dea71194920a45f072777c4b36a26ce0692bdbb5f",
-      "scans": {
-        "baseline": {
-          "status": "ok",
-          "total": 24,
-          "severity": {
-            "CRITICAL": 0,
-            "HIGH": 4,
-            "INFO": 1,
-            "LOW": 11,
-            "MEDIUM": 8,
-            "TRACE": 0
-          },
-          "query_ids": [
-            "02323c00-cdc3-4fdc-a310-4f2b3e7a1660",
-            "268ca686-7fb7-4ae9-b129-955a2a89064e",
-            "3ca03a61-3249-4c16-8427-6f8e47dda729",
-            "48471392-d4d0-47c0-b135-cdec95eb3eef",
-            "48a5beba-e4c0-4584-a2aa-e6894e4cf424",
-            "4a20ebac-1060-4c81-95d1-1f7f620e983b",
-            "4ac0e2b7-d2d2-4af7-8799-e8de6721ccda",
-            "5572cc5e-1e4c-4113-92a6-7a8a3bd25e6d",
-            "611ab018-c4aa-4ba2-b0f6-a448337509a6",
-            "7c81d34c-8e5a-402b-9798-9f442630e678",
-            "8b36775e-183d-4d46-b0f7-96a6f34a723f",
-            "94b76ea5-e074-4ca2-8a03-c5a606e30645",
-            "a659f3b5-9bf0-438a-bd9a-7d3a6427f1e3",
-            "a97a340a-0063-418e-b3a1-3028941d0995",
-            "a9c2f49d-0671-4fc9-9ece-f4e261e128d0",
-            "ade74944-a674-4e00-859e-c6eab5bde441",
-            "b14d1bc4-a208-45db-92f0-e21f8e2588e9",
-            "b7652612-de4e-4466-a0bf-1cd81f0c6063",
-            "caa3479d-885d-4882-9aac-95e5e78ef5c2",
-            "cf34805e-3872-4c08-bf92-6ff7bb0cfadb",
-            "dbbc6705-d541-43b0-b166-dd4be8208b54",
-            "f377b83e-bd07-4f48-a591-60c82b14a78b"
-          ],
-          "recovery": {
-            "status": "complete",
-            "started": 2,
-            "completed": 2,
-            "incomplete": 0
-          }
-        },
-        "enhanced": {
-          "status": "ok",
-          "total": 24,
-          "severity": {
-            "CRITICAL": 0,
-            "HIGH": 4,
-            "INFO": 1,
-            "LOW": 11,
-            "MEDIUM": 8,
-            "TRACE": 0
-          },
-          "query_ids": [
-            "02323c00-cdc3-4fdc-a310-4f2b3e7a1660",
-            "268ca686-7fb7-4ae9-b129-955a2a89064e",
-            "3ca03a61-3249-4c16-8427-6f8e47dda729",
-            "48471392-d4d0-47c0-b135-cdec95eb3eef",
-            "48a5beba-e4c0-4584-a2aa-e6894e4cf424",
-            "4a20ebac-1060-4c81-95d1-1f7f620e983b",
-            "4ac0e2b7-d2d2-4af7-8799-e8de6721ccda",
-            "5572cc5e-1e4c-4113-92a6-7a8a3bd25e6d",
-            "611ab018-c4aa-4ba2-b0f6-a448337509a6",
-            "7c81d34c-8e5a-402b-9798-9f442630e678",
-            "8b36775e-183d-4d46-b0f7-96a6f34a723f",
-            "94b76ea5-e074-4ca2-8a03-c5a606e30645",
-            "a659f3b5-9bf0-438a-bd9a-7d3a6427f1e3",
-            "a97a340a-0063-418e-b3a1-3028941d0995",
-            "a9c2f49d-0671-4fc9-9ece-f4e261e128d0",
-            "ade74944-a674-4e00-859e-c6eab5bde441",
-            "b14d1bc4-a208-45db-92f0-e21f8e2588e9",
-            "b7652612-de4e-4466-a0bf-1cd81f0c6063",
-            "caa3479d-885d-4882-9aac-95e5e78ef5c2",
-            "cf34805e-3872-4c08-bf92-6ff7bb0cfadb",
-            "dbbc6705-d541-43b0-b166-dd4be8208b54",
-            "f377b83e-bd07-4f48-a591-60c82b14a78b"
-          ],
-          "recovery": {
-            "status": "complete",
-            "started": 2,
-            "completed": 2,
-            "incomplete": 0
-          }
-        }
-      }
-    },
     {
       "case_id": "008351",
       "input_sha256": "207c34ca2ce0ac42c937877ad094d9de3b4d0e8f021a85ecc13513eb5b009579",
@@ -290,19 +132,452 @@
           }
         }
       }
+    },
+    {
+      "case_id": "008829",
+      "input_sha256": "a09392ee6999eb1a315191b2497b0ae4e1c1b3013dad56069e89f0faf26983f3",
+      "scans": {
+        "baseline": {
+          "status": "ok",
+          "total": 37,
+          "severity": {
+            "CRITICAL": 0,
+            "HIGH": 2,
+            "INFO": 3,
+            "LOW": 17,
+            "MEDIUM": 15,
+            "TRACE": 0
+          },
+          "query_ids": [
+            "02323c00-cdc3-4fdc-a310-4f2b3e7a1660",
+            "056ac60e-fe07-4acc-9b34-8e1d51716ab9",
+            "229588ef-8fde-40c8-8756-f4f2b5825ded",
+            "268ca686-7fb7-4ae9-b129-955a2a89064e",
+            "48471392-d4d0-47c0-b135-cdec95eb3eef",
+            "48a5beba-e4c0-4584-a2aa-e6894e4cf424",
+            "4a20ebac-1060-4c81-95d1-1f7f620e983b",
+            "4ac0e2b7-d2d2-4af7-8799-e8de6721ccda",
+            "5572cc5e-1e4c-4113-92a6-7a8a3bd25e6d",
+            "7c81d34c-8e5a-402b-9798-9f442630e678",
+            "8b36775e-183d-4d46-b0f7-96a6f34a723f",
+            "a659f3b5-9bf0-438a-bd9a-7d3a6427f1e3",
+            "a97a340a-0063-418e-b3a1-3028941d0995",
+            "a9c2f49d-0671-4fc9-9ece-f4e261e128d0",
+            "ade74944-a674-4e00-859e-c6eab5bde441",
+            "b14d1bc4-a208-45db-92f0-e21f8e2588e9",
+            "b7bca5c4-1dab-4c2c-8cbe-3050b9d59b14",
+            "ca469dd4-c736-448f-8ac1-30a642705e0a",
+            "caa3479d-885d-4882-9aac-95e5e78ef5c2",
+            "cf34805e-3872-4c08-bf92-6ff7bb0cfadb",
+            "dbbc6705-d541-43b0-b166-dd4be8208b54",
+            "e84eaf4d-2f45-47b2-abe8-e581b06deb66",
+            "f377b83e-bd07-4f48-a591-60c82b14a78b"
+          ],
+          "recovery": {
+            "status": "complete",
+            "started": 2,
+            "completed": 2,
+            "incomplete": 0
+          }
+        },
+        "enhanced": {
+          "status": "ok",
+          "total": 37,
+          "severity": {
+            "CRITICAL": 0,
+            "HIGH": 2,
+            "INFO": 3,
+            "LOW": 17,
+            "MEDIUM": 15,
+            "TRACE": 0
+          },
+          "query_ids": [
+            "02323c00-cdc3-4fdc-a310-4f2b3e7a1660",
+            "056ac60e-fe07-4acc-9b34-8e1d51716ab9",
+            "229588ef-8fde-40c8-8756-f4f2b5825ded",
+            "268ca686-7fb7-4ae9-b129-955a2a89064e",
+            "48471392-d4d0-47c0-b135-cdec95eb3eef",
+            "48a5beba-e4c0-4584-a2aa-e6894e4cf424",
+            "4a20ebac-1060-4c81-95d1-1f7f620e983b",
+            "4ac0e2b7-d2d2-4af7-8799-e8de6721ccda",
+            "5572cc5e-1e4c-4113-92a6-7a8a3bd25e6d",
+            "7c81d34c-8e5a-402b-9798-9f442630e678",
+            "8b36775e-183d-4d46-b0f7-96a6f34a723f",
+            "a659f3b5-9bf0-438a-bd9a-7d3a6427f1e3",
+            "a97a340a-0063-418e-b3a1-3028941d0995",
+            "a9c2f49d-0671-4fc9-9ece-f4e261e128d0",
+            "ade74944-a674-4e00-859e-c6eab5bde441",
+            "b14d1bc4-a208-45db-92f0-e21f8e2588e9",
+            "b7bca5c4-1dab-4c2c-8cbe-3050b9d59b14",
+            "ca469dd4-c736-448f-8ac1-30a642705e0a",
+            "caa3479d-885d-4882-9aac-95e5e78ef5c2",
+            "cf34805e-3872-4c08-bf92-6ff7bb0cfadb",
+            "dbbc6705-d541-43b0-b166-dd4be8208b54",
+            "e84eaf4d-2f45-47b2-abe8-e581b06deb66",
+            "f377b83e-bd07-4f48-a591-60c82b14a78b"
+          ],
+          "recovery": {
+            "status": "complete",
+            "started": 2,
+            "completed": 2,
+            "incomplete": 0
+          }
+        }
+      }
+    },
+    {
+      "case_id": "007794",
+      "input_sha256": "52919f437d0807afcd706ef139ab5c6163b7c7190aa39d0ca97ae7c0a932cf61",
+      "scans": {
+        "baseline": {
+          "status": "ok",
+          "total": 0,
+          "severity": {
+            "CRITICAL": 0,
+            "HIGH": 0,
+            "INFO": 0,
+            "LOW": 0,
+            "MEDIUM": 0,
+            "TRACE": 0
+          },
+          "query_ids": [],
+          "recovery": {
+            "status": "complete",
+            "started": 2,
+            "completed": 2,
+            "incomplete": 0
+          }
+        },
+        "enhanced": {
+          "status": "ok",
+          "total": 0,
+          "severity": {
+            "CRITICAL": 0,
+            "HIGH": 0,
+            "INFO": 0,
+            "LOW": 0,
+            "MEDIUM": 0,
+            "TRACE": 0
+          },
+          "query_ids": [],
+          "recovery": {
+            "status": "complete",
+            "started": 2,
+            "completed": 2,
+            "incomplete": 0
+          }
+        }
+      }
+    },
+    {
+      "case_id": "008627",
+      "input_sha256": "2592ae7b91e90b3900a90bda492319a6bca0fb84ab65594adf6b2b2f6d58013e",
+      "scans": {
+        "baseline": {
+          "status": "ok",
+          "total": 23,
+          "severity": {
+            "CRITICAL": 0,
+            "HIGH": 2,
+            "INFO": 0,
+            "LOW": 13,
+            "MEDIUM": 8,
+            "TRACE": 0
+          },
+          "query_ids": [
+            "02323c00-cdc3-4fdc-a310-4f2b3e7a1660",
+            "1db3a5a5-bf75-44e5-9e44-c56cfc8b1ac5",
+            "229588ef-8fde-40c8-8756-f4f2b5825ded",
+            "268ca686-7fb7-4ae9-b129-955a2a89064e",
+            "48471392-d4d0-47c0-b135-cdec95eb3eef",
+            "48a5beba-e4c0-4584-a2aa-e6894e4cf424",
+            "4a20ebac-1060-4c81-95d1-1f7f620e983b",
+            "4ac0e2b7-d2d2-4af7-8799-e8de6721ccda",
+            "5572cc5e-1e4c-4113-92a6-7a8a3bd25e6d",
+            "611ab018-c4aa-4ba2-b0f6-a448337509a6",
+            "7c81d34c-8e5a-402b-9798-9f442630e678",
+            "8b36775e-183d-4d46-b0f7-96a6f34a723f",
+            "a97a340a-0063-418e-b3a1-3028941d0995",
+            "a9c2f49d-0671-4fc9-9ece-f4e261e128d0",
+            "b14d1bc4-a208-45db-92f0-e21f8e2588e9",
+            "b7652612-de4e-4466-a0bf-1cd81f0c6063",
+            "bb241e61-77c3-4b97-9575-c0f8a1e008d0",
+            "ca469dd4-c736-448f-8ac1-30a642705e0a",
+            "caa3479d-885d-4882-9aac-95e5e78ef5c2",
+            "cf34805e-3872-4c08-bf92-6ff7bb0cfadb",
+            "d740d048-8ed3-49d3-b77b-6f072f3b669e",
+            "dbbc6705-d541-43b0-b166-dd4be8208b54",
+            "f377b83e-bd07-4f48-a591-60c82b14a78b"
+          ],
+          "recovery": {
+            "status": "complete",
+            "started": 2,
+            "completed": 2,
+            "incomplete": 0
+          }
+        },
+        "enhanced": {
+          "status": "ok",
+          "total": 23,
+          "severity": {
+            "CRITICAL": 0,
+            "HIGH": 2,
+            "INFO": 0,
+            "LOW": 13,
+            "MEDIUM": 8,
+            "TRACE": 0
+          },
+          "query_ids": [
+            "02323c00-cdc3-4fdc-a310-4f2b3e7a1660",
+            "1db3a5a5-bf75-44e5-9e44-c56cfc8b1ac5",
+            "229588ef-8fde-40c8-8756-f4f2b5825ded",
+            "268ca686-7fb7-4ae9-b129-955a2a89064e",
+            "48471392-d4d0-47c0-b135-cdec95eb3eef",
+            "48a5beba-e4c0-4584-a2aa-e6894e4cf424",
+            "4a20ebac-1060-4c81-95d1-1f7f620e983b",
+            "4ac0e2b7-d2d2-4af7-8799-e8de6721ccda",
+            "5572cc5e-1e4c-4113-92a6-7a8a3bd25e6d",
+            "611ab018-c4aa-4ba2-b0f6-a448337509a6",
+            "7c81d34c-8e5a-402b-9798-9f442630e678",
+            "8b36775e-183d-4d46-b0f7-96a6f34a723f",
+            "a97a340a-0063-418e-b3a1-3028941d0995",
+            "a9c2f49d-0671-4fc9-9ece-f4e261e128d0",
+            "b14d1bc4-a208-45db-92f0-e21f8e2588e9",
+            "b7652612-de4e-4466-a0bf-1cd81f0c6063",
+            "bb241e61-77c3-4b97-9575-c0f8a1e008d0",
+            "ca469dd4-c736-448f-8ac1-30a642705e0a",
+            "caa3479d-885d-4882-9aac-95e5e78ef5c2",
+            "cf34805e-3872-4c08-bf92-6ff7bb0cfadb",
+            "d740d048-8ed3-49d3-b77b-6f072f3b669e",
+            "dbbc6705-d541-43b0-b166-dd4be8208b54",
+            "f377b83e-bd07-4f48-a591-60c82b14a78b"
+          ],
+          "recovery": {
+            "status": "complete",
+            "started": 2,
+            "completed": 2,
+            "incomplete": 0
+          }
+        }
+      }
+    },
+    {
+      "case_id": "008802",
+      "input_sha256": "3f372a62a6376664f1ff7a0250089d2eb1f4adbcfb7215a37ab192da9b1c5351",
+      "scans": {
+        "baseline": {
+          "status": "ok",
+          "total": 3,
+          "severity": {
+            "CRITICAL": 0,
+            "HIGH": 1,
+            "INFO": 0,
+            "LOW": 2,
+            "MEDIUM": 0,
+            "TRACE": 0
+          },
+          "query_ids": [
+            "48a5beba-e4c0-4584-a2aa-e6894e4cf424",
+            "4a20ebac-1060-4c81-95d1-1f7f620e983b",
+            "aa8f7a35-9923-4cad-bd61-a19b7f6aac91"
+          ],
+          "recovery": {
+            "status": "complete",
+            "started": 2,
+            "completed": 2,
+            "incomplete": 0
+          }
+        },
+        "enhanced": {
+          "status": "ok",
+          "total": 6,
+          "severity": {
+            "CRITICAL": 0,
+            "HIGH": 1,
+            "INFO": 0,
+            "LOW": 3,
+            "MEDIUM": 2,
+            "TRACE": 0
+          },
+          "query_ids": [
+            "3ca03a61-3249-4c16-8427-6f8e47dda729",
+            "48a5beba-e4c0-4584-a2aa-e6894e4cf424",
+            "4a20ebac-1060-4c81-95d1-1f7f620e983b",
+            "611ab018-c4aa-4ba2-b0f6-a448337509a6",
+            "aa8f7a35-9923-4cad-bd61-a19b7f6aac91"
+          ],
+          "recovery": {
+            "status": "complete",
+            "started": 2,
+            "completed": 2,
+            "incomplete": 0
+          }
+        }
+      }
+    },
+    {
+      "case_id": "007644",
+      "input_sha256": "19c19d55590f93a5564381451b52c331199ee082ce9bc960811f057db8e3f53e",
+      "scans": {
+        "baseline": {
+          "status": "ok",
+          "total": 113,
+          "severity": {
+            "CRITICAL": 0,
+            "HIGH": 8,
+            "INFO": 5,
+            "LOW": 65,
+            "MEDIUM": 35,
+            "TRACE": 0
+          },
+          "query_ids": [
+            "02323c00-cdc3-4fdc-a310-4f2b3e7a1660",
+            "229588ef-8fde-40c8-8756-f4f2b5825ded",
+            "3d658f8b-d988-41a0-a841-40043121de1e",
+            "48471392-d4d0-47c0-b135-cdec95eb3eef",
+            "487f4be7-3fd9-4506-a07a-eae252180c08",
+            "48a5beba-e4c0-4584-a2aa-e6894e4cf424",
+            "4a20ebac-1060-4c81-95d1-1f7f620e983b",
+            "4ac0e2b7-d2d2-4af7-8799-e8de6721ccda",
+            "592ad21d-ad9b-46c6-8d2d-fad09d62a942",
+            "611ab018-c4aa-4ba2-b0f6-a448337509a6",
+            "7c81d34c-8e5a-402b-9798-9f442630e678",
+            "8b36775e-183d-4d46-b0f7-96a6f34a723f",
+            "8cf4671a-cf3d-46fc-8389-21e7405063a2",
+            "a659f3b5-9bf0-438a-bd9a-7d3a6427f1e3",
+            "a9c2f49d-0671-4fc9-9ece-f4e261e128d0",
+            "ade74944-a674-4e00-859e-c6eab5bde441",
+            "b14d1bc4-a208-45db-92f0-e21f8e2588e9",
+            "b7652612-de4e-4466-a0bf-1cd81f0c6063",
+            "b9c83569-459b-4110-8f79-6305aa33cb37",
+            "c4d3b58a-e6d4-450f-9340-04f1e702eaae",
+            "c589f42c-7924-4871-aee2-1cede9bc7cbc",
+            "ca469dd4-c736-448f-8ac1-30a642705e0a",
+            "caa3479d-885d-4882-9aac-95e5e78ef5c2",
+            "e84eaf4d-2f45-47b2-abe8-e581b06deb66",
+            "f377b83e-bd07-4f48-a591-60c82b14a78b"
+          ],
+          "recovery": {
+            "status": "complete",
+            "started": 2,
+            "completed": 2,
+            "incomplete": 0
+          }
+        },
+        "enhanced": {
+          "status": "ok",
+          "total": 113,
+          "severity": {
+            "CRITICAL": 0,
+            "HIGH": 8,
+            "INFO": 5,
+            "LOW": 65,
+            "MEDIUM": 35,
+            "TRACE": 0
+          },
+          "query_ids": [
+            "02323c00-cdc3-4fdc-a310-4f2b3e7a1660",
+            "229588ef-8fde-40c8-8756-f4f2b5825ded",
+            "3d658f8b-d988-41a0-a841-40043121de1e",
+            "48471392-d4d0-47c0-b135-cdec95eb3eef",
+            "487f4be7-3fd9-4506-a07a-eae252180c08",
+            "48a5beba-e4c0-4584-a2aa-e6894e4cf424",
+            "4a20ebac-1060-4c81-95d1-1f7f620e983b",
+            "4ac0e2b7-d2d2-4af7-8799-e8de6721ccda",
+            "592ad21d-ad9b-46c6-8d2d-fad09d62a942",
+            "611ab018-c4aa-4ba2-b0f6-a448337509a6",
+            "7c81d34c-8e5a-402b-9798-9f442630e678",
+            "8b36775e-183d-4d46-b0f7-96a6f34a723f",
+            "8cf4671a-cf3d-46fc-8389-21e7405063a2",
+            "a659f3b5-9bf0-438a-bd9a-7d3a6427f1e3",
+            "a9c2f49d-0671-4fc9-9ece-f4e261e128d0",
+            "ade74944-a674-4e00-859e-c6eab5bde441",
+            "b14d1bc4-a208-45db-92f0-e21f8e2588e9",
+            "b7652612-de4e-4466-a0bf-1cd81f0c6063",
+            "b9c83569-459b-4110-8f79-6305aa33cb37",
+            "c4d3b58a-e6d4-450f-9340-04f1e702eaae",
+            "c589f42c-7924-4871-aee2-1cede9bc7cbc",
+            "ca469dd4-c736-448f-8ac1-30a642705e0a",
+            "caa3479d-885d-4882-9aac-95e5e78ef5c2",
+            "e84eaf4d-2f45-47b2-abe8-e581b06deb66",
+            "f377b83e-bd07-4f48-a591-60c82b14a78b"
+          ],
+          "recovery": {
+            "status": "complete",
+            "started": 2,
+            "completed": 2,
+            "incomplete": 0
+          }
+        }
+      }
+    },
+    {
+      "case_id": "009831",
+      "input_sha256": "533b4a5d1c8eee3edbf95c138917d5e7ef5c6e4a3fecdb28d31adcde49367f80",
+      "scans": {
+        "baseline": {
+          "status": "ok",
+          "total": 1,
+          "severity": {
+            "CRITICAL": 0,
+            "HIGH": 1,
+            "INFO": 0,
+            "LOW": 0,
+            "MEDIUM": 0,
+            "TRACE": 0
+          },
+          "query_ids": [
+            "baee238e-1921-4801-9c3f-79ae1d7b2cbc"
+          ],
+          "recovery": {
+            "status": "complete",
+            "started": 2,
+            "completed": 2,
+            "incomplete": 0
+          }
+        },
+        "enhanced": {
+          "status": "ok",
+          "total": 35,
+          "severity": {
+            "CRITICAL": 0,
+            "HIGH": 3,
+            "INFO": 3,
+            "LOW": 17,
+            "MEDIUM": 12,
+            "TRACE": 0
+          },
+          "query_ids": [
+            "02323c00-cdc3-4fdc-a310-4f2b3e7a1660",
+            "229588ef-8fde-40c8-8756-f4f2b5825ded",
+            "268ca686-7fb7-4ae9-b129-955a2a89064e",
+            "3d658f8b-d988-41a0-a841-40043121de1e",
+            "48471392-d4d0-47c0-b135-cdec95eb3eef",
+            "487f4be7-3fd9-4506-a07a-eae252180c08",
+            "48a5beba-e4c0-4584-a2aa-e6894e4cf424",
+            "4a20ebac-1060-4c81-95d1-1f7f620e983b",
+            "4ac0e2b7-d2d2-4af7-8799-e8de6721ccda",
+            "4b2b5fd3-364d-4093-bac2-17391b2a5297",
+            "5572cc5e-1e4c-4113-92a6-7a8a3bd25e6d",
+            "8b36775e-183d-4d46-b0f7-96a6f34a723f",
+            "a97a340a-0063-418e-b3a1-3028941d0995",
+            "a9c2f49d-0671-4fc9-9ece-f4e261e128d0",
+            "b14d1bc4-a208-45db-92f0-e21f8e2588e9",
+            "b9c83569-459b-4110-8f79-6305aa33cb37",
+            "ca469dd4-c736-448f-8ac1-30a642705e0a",
+            "cf34805e-3872-4c08-bf92-6ff7bb0cfadb",
+            "dbbc6705-d541-43b0-b166-dd4be8208b54",
+            "e84eaf4d-2f45-47b2-abe8-e581b06deb66",
+            "f377b83e-bd07-4f48-a591-60c82b14a78b"
+          ],
+          "recovery": {
+            "status": "complete",
+            "started": 2,
+            "completed": 2,
+            "incomplete": 0
+          }
+        }
+      }
     }
-  ],
-  "supersedes_pilot_case_ids": [
-    "007191",
-    "009464",
-    "008351",
-    "008578"
-  ],
-  "pilot_case_ids": [
-    "007192",
-    "009464",
-    "008351",
-    "008578"
-  ],
-  "pilot_selection_note": "Replaced empty-render parent chart 007191 with nested chart 007192 after observing an OS-specific recovery-trace discrepancy. The active 810-case delegation and Windows cutover are unchanged."
+  ]
 }

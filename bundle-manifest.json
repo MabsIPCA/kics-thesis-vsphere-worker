@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "created_at": "2026-11-17T23:04:33.636246+00:00",
-  "release_tag": "corpus-20261117-25pct",
+  "created_at": "2026-11-18T01:59:51.515105+00:00",
+  "release_tag": "corpus-20261118-batch1000",
   "github_repo": "MabsIPCA/kics-thesis-vsphere-worker",
-  "delegation_sha256": "aa170b19e2ad05c80759182698c39576e479b48437a28cffc0d25cd8170fec10",
+  "delegation_sha256": "f0fb37aa34ec1fe01494774983ab26d93c4c9022b4cddda332cf2cc1d205d57b",
   "kics_source_sha256": "27badd32914402889131dda211f6e452b3e2825f515c41287a09805f80b00818",
   "linux_binary_sha256": "7c49b1e07945f03b01c37855aa7462ae70d2272dfc7500d9e2f579ab1319d52a",
   "assets": [
@@ -23,24 +23,44 @@
       "sha256": "db10ac54d6908e5043448e5eee6bbe0c1905f6acfe7a9f34a5376e58d44f0406"
     },
     {
-      "name": "corpus-beclab__apps.tar.gz",
-      "bytes": 3440926,
-      "sha256": "fb823cdac47ca290ec994d0fd4e1c40d155af97d02ca08e6d066c412e7aadc0c"
-    },
-    {
-      "name": "corpus-kubernetes__charts.tar.gz",
-      "bytes": 6269713,
-      "sha256": "1140514b4c4d5dc67b2b2b49357b675b0c80bd6c249766d1f77b6fc031068a19"
-    },
-    {
       "name": "corpus-redhat-community-ai-tools__UnifAI.tar.gz",
       "bytes": 41222861,
-      "sha256": "381e17856299abd803f9bb263e783b86a3fe3a51b6f30e0dc42c98504aa137d1"
+      "sha256": "2a1bd36724a1ee9d3cb73e723065968b33e101430a2dbfded0b1f0b74a08002b"
     },
     {
       "name": "corpus-EugenMayer__helm-charts.tar.gz",
       "bytes": 1482559,
-      "sha256": "a9ea5e1335e5d8bbe3588ff46496e4ed2d1102b41a0d437b167e22be8f99f802"
+      "sha256": "871c74675abc0e7fad3986f9d9714ad97eccfb6a52d637a8a6cb8b960396e184"
+    },
+    {
+      "name": "corpus-k0rdent__catalog.tar.gz",
+      "bytes": 49130699,
+      "sha256": "46bfd51eb745c129fe3fb82ddd34d98edfd573078de43e925ec83328c526ecaa"
+    },
+    {
+      "name": "corpus-sapcc__helm-charts.tar.gz",
+      "bytes": 5914043,
+      "sha256": "fcf86c610e25cd3f4b25e7b4af9c9a8d4b7edfb2f403d94b49cf803528ae1506"
+    },
+    {
+      "name": "corpus-turbonomic__t8c-install.tar.gz",
+      "bytes": 3960737,
+      "sha256": "943ad83f6c7b79e250467cb568165ca119b8188c31592fe2ff71f1121f9606c6"
+    },
+    {
+      "name": "corpus-omdv__homelab-server.tar.gz",
+      "bytes": 77231,
+      "sha256": "ef73d8945a4c4cf3aa25b9b6cd8cb77c21cf50b83fa1d2a127276a1d7c5c2607"
+    },
+    {
+      "name": "corpus-boozallen__aissemble.tar.gz",
+      "bytes": 7078755,
+      "sha256": "ceba345b9796a975d028f5185dacd4443dd84cce99f83dd80a3ef7e3d32c097a"
+    },
+    {
+      "name": "corpus-CloudPirates-io__helm-charts.tar.gz",
+      "bytes": 1244196,
+      "sha256": "43218e6792f4f6b7c85423393502d21a3e3a180c8b795060e1e9337ac2231f35"
     }
   ]
 }

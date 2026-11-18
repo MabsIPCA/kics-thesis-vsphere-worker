@@ -9,7 +9,8 @@ from pathlib import Path
 import tarfile
 
 
-WORK = Path(os.environ.get("KICS_VM_WORK_ROOT", Path.home() / "kics-vsphere-work")).resolve()
+ROOT = Path(__file__).resolve().parents[1]
+WORK = Path(os.environ.get("KICS_VM_WORK_ROOT", Path.home() / "kics-vsphere-work-batch2")).resolve()
 
 
 def sha(path):
@@ -27,11 +28,16 @@ def main():
     if not assigned.is_dir() or not pilot.is_dir():
         raise SystemExit("both pilot and assigned results are required")
     manifest = json.loads((assigned / "manifest.json").read_text(encoding="utf-8"))
-    if manifest["status"] != "completed" or manifest["terminal_records"] != 810:
-        raise SystemExit("vSphere assignment has not completed all 810 cases")
+    delegation_path = ROOT / "plan/vsphere-delegation.json"
+    delegation = json.loads(delegation_path.read_text(encoding="utf-8"))
+    if (manifest["status"] != "completed"
+            or manifest["terminal_records"] != len(delegation["assigned_case_ids"])
+            or manifest["delegation_sha256"] != sha(delegation_path)):
+        raise SystemExit("vSphere batch is incomplete or has different provenance")
     export = WORK / "exports"
     export.mkdir(exist_ok=True)
-    archive_path = export / "vsphere-results-20261117.tar.gz"
+    stem = delegation["result_export_stem"]
+    archive_path = export / f"{stem}.tar.gz"
     partial = archive_path.with_name(archive_path.name + ".partial")
     if partial.exists():
         partial.unlink()
@@ -47,7 +53,7 @@ def main():
         "delegation_sha256": manifest["delegation_sha256"],
         "records": manifest["terminal_records"],
     }
-    (export / "vsphere-results-20261117.json").write_text(
+    (export / f"{stem}.json").write_text(
         json.dumps(summary, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(summary, indent=2))
 
