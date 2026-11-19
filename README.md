@@ -1,5 +1,9 @@
 # vSphere KICS thesis worker: second batch
 
+**VM operator:** follow the complete [operator handoff](OPERATOR_HANDOFF.md)
+for prerequisites, copy-paste startup and resume commands, progress checks,
+result verification, and return instructions.
+
 This `batch-1000` branch runs **1,000 new chart cases** on the vSphere VM.
 The previous VM [result release](https://github.com/cx-miguel-dasilva/kics-thesis-vsphere-worker/releases/tag/vsphere-results-20261117)
 contains 959 completed cases and is preserved separately. The new batch
