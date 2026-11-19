@@ -1,5 +1,11 @@
 # vSphere KICS thesis worker: second batch
 
+> **Assignment update, 19 November 2026:** The audited VM results already
+> cover 42 IDs in this batch. The other 958 IDs have been assigned to a
+> dedicated Windows continuation. Do not start this full 1,000-case VM run
+> while that Windows continuation is active. Preserve any VM results already
+> produced; the final merge will compare and deduplicate by case ID.
+
 **VM operator:** follow the complete [operator handoff](OPERATOR_HANDOFF.md)
 for prerequisites, copy-paste startup and resume commands, progress checks,
 result verification, and return instructions.

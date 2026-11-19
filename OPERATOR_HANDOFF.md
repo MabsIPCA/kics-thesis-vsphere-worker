@@ -1,5 +1,12 @@
 # vSphere VM operator handoff: KICS batch 1000
 
+> **Assignment update, 19 November 2026:** The 958 IDs without a published
+> VM result are now assigned to a dedicated Windows continuation. The older
+> VM release covers the other 42 IDs. Please pause this full-batch VM how-to;
+> running it now would duplicate the active Windows assignment. Keep any VM
+> archive already produced and send its release URL to the thesis owner so
+> the case IDs can be compared before final accounting.
+
 This guide is for the person operating the Ubuntu vSphere VM. Run the
 `batch-1000` branch of the public [worker repository](https://github.com/MabsIPCA/kics-thesis-vsphere-worker/tree/batch-1000).
 It has **1,000 assigned Helm chart cases** in eight saved repositories. The
